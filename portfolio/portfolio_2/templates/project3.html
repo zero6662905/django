@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head> <meta charset="UTF-8">
+    <title>Про мене — Моє портфоліо</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ccc.css' %}">
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <a class="brand" href="{% url 'portfolio:home' %}">🚀 Моє Портфоліо</a>
+    <nav class="nav-links">
+      <a href="{% url 'portfolio:home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Про мене</a>
+      <a href="{% url 'portfolio:p1' %}" class="{% if request.resolver_match.url_name == 'p1' %}active{% endif %}">Проєкт 1</a>
+      <a href="{% url 'portfolio:p2' %}" class="{% if request.resolver_match.url_name == 'p2' %}active{% endif %}">Проєкт 2</a>
+      <a href="{% url 'portfolio:p3' %}" class="{% if request.resolver_match.url_name == 'p3' %}active{% endif %}">Проєкт 3</a>
+    </nav>
+  </div>
+</header>
+<main>
+    <h1>Проєкт 3 — сервіс ремонту </h1>
+    <p>
+      Це мій третий проєкт. ми його робили всіею групою збиралися вирішували помилки робили завдання
+      <a href="https://github.com/zero6662905/fastapi_app_repair_service" target="_blank" rel="noopener noreferrer">github проекту</a>
+    </p>
+</main>
+</body>
+</html>
