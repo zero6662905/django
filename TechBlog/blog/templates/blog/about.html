@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Про нас - TechBlog{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-5">Про нас</h1>
+        <p class="lead">Ми команда ентузіастів, які живуть технологіями 💡</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Наша команда</h2>
+    <div class="row">
+        {% for member in team_members %}
+        <div class="col-md-4 mb-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4>{{ member.name }}</h4>
+                    <p class="text-muted">{{ member.role }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

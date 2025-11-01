@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Контакти - TechBlog{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-5">Контакти</h1>
+        <p class="lead">Зв'яжіться з нами — ми завжди на зв’язку 💬</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <h4>📧 Email:</h4>
+            <p>{{ email }}</p>
+            <h4>📞 Телефон:</h4>
+            <p>{{ phone }}</p>
+            <h4>📍 Адреса:</h4>
+            <p>{{ address }}</p>
+        </div>
+
+        <div class="col-md-6 text-center">
+            {% load static %}
+                <img src="{% static 'images/office.jpg' %}" alt="Наш офіс" class="img-fluid rounded shadow">
+        </div>
+    </div>
+</div>
+{% endblock %}

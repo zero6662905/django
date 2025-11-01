@@ -1,5 +1,5 @@
 """
-URL configuration for portfolio project.
+URL configuration for TechBlog project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('portfolio/', include('portfolio_2.urls'))
+    path('', include('blog.urls')),
 ]
